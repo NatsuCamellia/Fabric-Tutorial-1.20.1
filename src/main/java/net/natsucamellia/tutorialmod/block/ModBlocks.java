@@ -13,6 +13,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.natsucamellia.tutorialmod.TutorialMod;
+import net.natsucamellia.tutorialmod.block.custom.SoundBlock;
 
 public class ModBlocks {
 
@@ -21,7 +22,7 @@ public class ModBlocks {
     public static final Block RAW_RUBY_BLOCK = registerBlock("raw_ruby_block",
             new Block(FabricBlockSettings.copy(Blocks.IRON_BLOCK).sounds(BlockSoundGroup.AMETHYST_BLOCK)));
     public static final Block SOUND_BLOCK = registerBlock("sound_block",
-            new Block(FabricBlockSettings.copy(Blocks.NOTE_BLOCK)));
+            new SoundBlock(FabricBlockSettings.copy(Blocks.NOTE_BLOCK)));
     public static final Block RUBY_ORE = registerBlock("ruby_ore",
             new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.STONE).strength(2f), UniformIntProvider.create(2, 5)));
     public static final Block DEEPSLATE_RUBY_ORE = registerBlock("deepslate_ruby_ore",
