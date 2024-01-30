@@ -2,6 +2,7 @@ package net.natsucamellia.tutorialmod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.natsucamellia.tutorialmod.block.ModBlocks;
 import net.natsucamellia.tutorialmod.item.ModItemGroups;
 import net.natsucamellia.tutorialmod.item.ModItems;
@@ -17,5 +18,6 @@ public class TutorialMod implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+		FuelRegistry.INSTANCE.add(ModItems.COAL_BRIQUETTE, 200);
 	}
 }
