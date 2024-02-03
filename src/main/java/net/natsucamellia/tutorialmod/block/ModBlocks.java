@@ -3,7 +3,6 @@ package net.natsucamellia.tutorialmod.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
-import net.minecraft.client.QuickPlayLogger;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -50,9 +49,9 @@ public class ModBlocks {
             new WallBlock(FabricBlockSettings.copy(Blocks.IRON_BLOCK)));
 
     public static final Block RUBY_DOOR = registerBlock("ruby_door",
-            new DoorBlock(FabricBlockSettings.copy(Blocks.IRON_BLOCK), BlockSetType.IRON));
+            new DoorBlock(FabricBlockSettings.copy(Blocks.IRON_BLOCK).nonOpaque(), BlockSetType.IRON));
     public static final Block RUBY_TRAPDOOR = registerBlock("ruby_trapdoor",
-            new TrapdoorBlock(FabricBlockSettings.copy(Blocks.IRON_BLOCK), BlockSetType.IRON));
+            new TrapdoorBlock(FabricBlockSettings.copy(Blocks.IRON_BLOCK).nonOpaque(), BlockSetType.IRON));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
